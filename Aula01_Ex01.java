@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("Informe a quantidade de livros adquiridos: ");
+    /*LINHA DE CODIGO OMITIDA APENAS PARA ENVIO NO RUN.CODES
+    System.out.println("Informe a quantidade de livros adquiridos: ");*/
     Scanner leitor = new Scanner (System.in);
     
     //carrega a quantidade de livros adquiridos na variável qtddLivros
