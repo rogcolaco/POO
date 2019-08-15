@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         int i;
@@ -25,8 +26,6 @@ public class Main {
             C[i]=A[i]+B[i];
         }
 
-        for (int a:C){
-            System.out.printf("%d \t", a);
-        }
+        System.out.println(C[0]+", "+C[1]+", "+C[2]+", "+C[3]+", "+C[4]);
     }
 }
