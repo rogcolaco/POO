@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         int i, j, a, empty;
         boolean isNew;
@@ -31,6 +31,7 @@ public class Main {
 
             //LAÇO REPETICAO
             while (empty > 0 && empty < 10) {
+                leitor.nextLine();
                 isNew = false;
                 j = leitor.nextInt();
                 for (i = 0; i < empty; i++) {
