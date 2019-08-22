@@ -4,6 +4,7 @@ public class Employee {
     String name, jobTitle;;
     long id;
     double salary;
+    Departament departament;
 
     //CONSTRUCTORS
     public Employee(long id) {
@@ -14,12 +15,20 @@ public class Employee {
         this.name = name;
         this.id = id;
     }
-    
+
     public Employee(String name, String jobTitle, long id, double salary) {
         this.name = name;
         this.jobTitle = jobTitle;
         this.id = id;
         this.salary = salary;
+    }
+
+    public Departament getDepartament(){
+        return departament;
+    }
+
+    public void setDepartament(Departament departament){
+        this.departament=departament;
     }
 
     //SETS AND GETS
