@@ -55,4 +55,9 @@ public class Departament {
     public void setBudget(double budget) {
         this.budget = budget;
     }
+
+    //METHODS
+    public void printState(){
+        System.out.println(this.name+"\t"+this.location+"\t"+this.code+"\t"+this.phoneExtention+"\t"+this.budget);
+    }
 }
