@@ -15,10 +15,13 @@ public class Principal {
         }*/
 
         Employee empregado = new Employee(123);
+        Departament departamento = new Departament("WEB",001);
 
         empregado.printState();
+        departamento.printState();
         empregado.setName("Rogerio");
         empregado.setSalary(1200.10);
+        Employee.setDepartament(departamento);
         empregado.printState();
         empregado.getAnnualSalary();
     }
