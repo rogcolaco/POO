@@ -14,9 +14,15 @@ public class Employee {
         this.name = name;
         this.id = id;
     }
+    
+    public Employee(String name, String jobTitle, long id, double salary) {
+        this.name = name;
+        this.jobTitle = jobTitle;
+        this.id = id;
+        this.salary = salary;
+    }
 
     //SETS AND GETS
-
     public String getName() {
         return name;
     }
@@ -48,4 +54,14 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
+
+    //METHODS
+    public void printState(){
+        System.out.println(this.id+"\t"+this.name+"\t"+this.jobTitle+"\t"+this.salary);
+    }
+
+    public void getAnnualSalary(){
+        System.out.println(this.salary*12);
+    }
+
 }
