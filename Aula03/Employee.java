@@ -1,21 +1,22 @@
 public class Employee {
 
     //DECLARAÇÃO ATRIBUTOS DA CLASSE
-    String name, location;
-    int code, phoneExtention;
-    double budget;
+    String name, jobTitle;;
+    long id;
+    double salary;
 
     //CONSTRUCTORS
-    public Employee(int code) {
-        this.code = code;
+    public Employee(long id) {
+        this.id = id;
     }
 
-    public Employee(String name, int code) {
+    public Employee(String name, long id) {
         this.name = name;
-        this.code = code;
+        this.id = id;
     }
 
     //SETS AND GETS
+
     public String getName() {
         return name;
     }
@@ -24,35 +25,27 @@ public class Employee {
         this.name = name;
     }
 
-    public String getLocation() {
-        return location;
+    public String getJobTitle() {
+        return jobTitle;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
-    public int getCode() {
-        return code;
+    public long getId() {
+        return id;
     }
 
-    public void setCode(int code) {
-        this.code = code;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public int getPhoneExtention() {
-        return phoneExtention;
+    public double getSalary() {
+        return salary;
     }
 
-    public void setPhoneExtention(int phoneExtention) {
-        this.phoneExtention = phoneExtention;
-    }
-
-    public double getBudget() {
-        return budget;
-    }
-
-    public void setBudget(double budget) {
-        this.budget = budget;
+    public void setSalary(double salary) {
+        this.salary = salary;
     }
 }
