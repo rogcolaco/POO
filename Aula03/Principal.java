@@ -9,20 +9,22 @@ public class Principal {
 
         Scanner leitor = new Scanner(System.in);
 
-        /*for(i=0;i<3;i++){
-            d=leitor.nextInt();
-            Employee empregado = new Employee(d);
-        }*/
 
-        Employee empregado = new Employee(123);
-        Departament departamento = new Departament("WEB",001);
+        Departament departament1 = new Departament("WEB",001);
 
-        empregado.printState();
-        departamento.printState();
-        empregado.setName("Rogerio");
-        empregado.setSalary(1200.10);
-        Employee.setDepartament(departamento);
-        empregado.printState();
-        empregado.getAnnualSalary();
+
+        //PROBLEMA PARA SER RESOLVIDO COMO O OBJETO PODE SER CRIADO COM ASSOCIAÇÃO COM DEPARTAMENT?
+        Employee employee1 = new Employee(101);
+        employee1.setDepartament(departament1);
+        Employee employee3 = new Employee(103);
+        employee3.setDepartament(departament1);
+
+        employee1.printState();
+        employee3.printState();
+
+        System.out.println("\n");
+        
+        departament1.printState();
+
     }
 }
