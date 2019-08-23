@@ -2,20 +2,14 @@ public class Departament {
 
     //DECLARAÇÃO ATRIBUTOS DA CLASSE
     String name, location;
-    int code, phoneExtention, empty;
+    int code, phoneExtention;
     double budget;
     Employee[] employee = new Employee[10];
 
     //CONSTRUCTORS
-    public Departament(int code) {
-        this.code = code;
-        this.empty = 0;
-    }
-
     public Departament(String name, int code) {
         this.name = name;
         this.code = code;
-        this.empty=0;
     }
 
     //SETS AND GETS
@@ -55,14 +49,6 @@ public class Departament {
         return budget;
     }
 
-    public int getEmpty() {
-        return empty;
-    }
-
-    public void setEmpty(int empty) {
-        this.empty = empty;
-    }
-
     public Employee[] getEmployees() {
         return employee;
     }
@@ -73,6 +59,24 @@ public class Departament {
 
     //METHODS
     public void printState(){
-        System.out.println(this.name+"\t"+this.location+"\t"+this.code+"\t"+this.phoneExtention+"\t"+this.budget);
+        System.out.println(this.name+"\t"+this.location+"\t"+this.code+"\t"+this.phoneExtention+"\t"+this.budget+"\t"+this.getEmployees()[0].id);
+    }
+
+    public int sizeOfEmployees(){
+        int count;
+
+        count=0;
+        for(Employee i : this.getEmployees()){
+            if(i.name=="null") {
+                System.out.println(i.name);
+                break;
+            }
+            else{
+                System.out.println(i.id);
+                count++;
+                System.out.println(count);
+            }
+        }
+        return count;
     }
 }
