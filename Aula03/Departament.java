@@ -2,17 +2,20 @@ public class Departament {
 
     //DECLARAÇÃO ATRIBUTOS DA CLASSE
     String name, location;
-    int code, phoneExtention;
+    int code, phoneExtention, empty;
     double budget;
+    String[] employees = new String[10];
 
     //CONSTRUCTORS
     public Departament(int code) {
         this.code = code;
+        this.empty = 0;
     }
 
     public Departament(String name, int code) {
         this.name = name;
         this.code = code;
+        this.empty=0;
     }
 
     //SETS AND GETS
@@ -52,8 +55,20 @@ public class Departament {
         return budget;
     }
 
-    public void setBudget(double budget) {
-        this.budget = budget;
+    public int getEmpty() {
+        return empty;
+    }
+
+    public void setEmpty(int empty) {
+        this.empty = empty;
+    }
+
+    public String[] getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(String[] employees) {
+        this.employees = employees;
     }
 
     //METHODS
