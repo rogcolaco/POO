@@ -4,7 +4,7 @@ public class Departament {
     String name, location;
     int code, phoneExtention, empty;
     double budget;
-    String[] employees = new String[10];
+    Employee[] employee = new Employee[10];
 
     //CONSTRUCTORS
     public Departament(int code) {
@@ -63,12 +63,12 @@ public class Departament {
         this.empty = empty;
     }
 
-    public String[] getEmployees() {
-        return employees;
+    public Employee[] getEmployees() {
+        return employee;
     }
 
-    public void setEmployees(String[] employees) {
-        this.employees = employees;
+    public void setEmployees(Employee[] employees) {
+        this.employee = employees;
     }
 
     //METHODS
