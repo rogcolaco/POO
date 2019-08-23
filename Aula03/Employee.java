@@ -23,14 +23,6 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Departament getDepartament(){
-        return departament;
-    }
-
-    public void setDepartament(Departament departament){
-        this.departament=departament;
-    }
-
     //SETS AND GETS
     public String getName() {
         return name;
@@ -64,9 +56,17 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Departament getDepartament(){
+        return departament;
+    }
+
+    public void setDepartament(Departament departament){
+        this.departament=departament;
+    }
+
     //METHODS
-    public void printState(){
-        System.out.println(this.id+"\t"+this.name+"\t"+this.jobTitle+"\t"+this.salary);
+    public void printState() {
+        System.out.println(this.id + "\t" + this.name + "\t" + this.jobTitle + "\t" + this.salary + "\t" + this.getDepartament().name);
     }
 
     public void getAnnualSalary(){
