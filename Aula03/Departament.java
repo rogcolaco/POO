@@ -58,23 +58,55 @@ public class Departament {
     }
 
     //METHODS
-    public void printState(){
-        System.out.println(this.name+"\t"+this.location+"\t"+this.code+"\t"+this.phoneExtention+"\t"+this.budget+"\t"+this.getEmployees()[0].id);
+    public void printState() {
+        System.out.println(this.name + "\t" + this.location + "\t" + this.code + "\t" + this.phoneExtention + "\t" + this.budget + "\t");
+        for (Employee i : this.getEmployees()) {
+            if (i.name == "set") {
+                break;
+            } else {
+                System.out.println(i.id + "\t"+i.name);
+            }
+        }
     }
+
+    public void addEmployee(Employee employee){
+        for (Employee i : this.getEmployees()){
+            if(i.name=="set"){
+                i.name=employee.name;
+                i.id= employee.id;
+                i.departament=employee.departament;
+                i.salary=employee.salary;
+                i.jobTitle=employee.jobTitle;
+                break;
+            }
+        }
+
+    }
+
+    /*public void removeEmployee(Employee employee){
+        for (Employee i : this.getEmployees()){
+            if(i.id==employee.id){
+                i.name=employee.name;
+                i.id= employee.id;
+                i.departament=employee.departament;
+                i.salary=employee.salary;
+                i.jobTitle=employee.jobTitle;
+                break;
+            }
+        }
+
+    }*/
 
     public int sizeOfEmployees(){
         int count;
 
         count=0;
         for(Employee i : this.getEmployees()){
-            if(i.name=="null") {
-                System.out.println(i.name);
+            if(i.name=="set") {
                 break;
             }
             else{
-                System.out.println(i.id);
                 count++;
-                System.out.println(count);
             }
         }
         return count;
