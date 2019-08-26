@@ -27,6 +27,7 @@ public class Principal {
         Employee employee3 = new Employee(103);
         employee3.setDepartament(departament1);
         employee3.setName("Monica");
+        Employee employee2 = new Employee("Lucas","Professor",102,10.000);
 
         employee1.printState();
         employee3.printState();
@@ -47,6 +48,17 @@ public class Principal {
         System.out.printf("A quantidade de funcionarios no departamento 1 é: %d \n", d);
         System.out.println("\n");
         departament1.addEmployee(employee3);
+        departament1.addEmployee(employee2);
         departament1.printState();
+        System.out.println("\n");
+        departament1.removeEmployee(employee1);
+        departament1.printState();
+        System.out.println("\n");
+        departament1.addEmployee(employee1);
+        departament1.printState();
+        System.out.println("\n");
+        departament1.removeEmployee(102);
+        departament1.printState();
+        departament1.listAllEmployess();
     }
 }
