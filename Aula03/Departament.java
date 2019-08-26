@@ -5,6 +5,7 @@ public class Departament {
     int code, phoneExtention;
     double budget;
     Employee[] employee = new Employee[10];
+    Employee departamentCharge;
 
     //CONSTRUCTORS
     public Departament(String name, int code) {
@@ -49,12 +50,24 @@ public class Departament {
         return budget;
     }
 
+    public void setBudget(double budget) {
+        this.budget = budget;
+    }
+
     public Employee[] getEmployees() {
         return employee;
     }
 
     public void setEmployees(Employee[] employees) {
         this.employee = employees;
+    }
+
+    public Employee getDepartamentCharge() {
+        return departamentCharge;
+    }
+
+    public void setDepartamentCharge(Employee departamentCarge) {
+        this.departamentCharge = departamentCarge;
     }
 
     //METHODS
