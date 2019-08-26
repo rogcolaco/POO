@@ -59,7 +59,10 @@ public class Departament {
 
     //METHODS
     public void printState() {
-        System.out.println(this.name + "\t" + this.location + "\t" + this.code + "\t" + this.phoneExtention + "\t" + this.budget + "\t");
+        System.out.println("nome dpto\tlocalizacao\tcodigo\tramal\toramento");
+        System.out.println(this.name + "\t" + this.location + "\t" + this.code + "\t" + this.phoneExtention + "\t" + this.budget);
+        System.out.println("Funcionarios cadastrados nesse departamento");
+        System.out.println("id \tnome");
         for (Employee i : this.getEmployees()) {
             if (i.name == "set") {
                 break;
@@ -83,19 +86,45 @@ public class Departament {
 
     }
 
-    /*public void removeEmployee(Employee employee){
-        for (Employee i : this.getEmployees()){
-            if(i.id==employee.id){
-                i.name=employee.name;
-                i.id= employee.id;
-                i.departament=employee.departament;
-                i.salary=employee.salary;
-                i.jobTitle=employee.jobTitle;
-                break;
+    public void removeEmployee(Employee employee){
+        int i, j, k;
+
+        label:
+        for (i=0;i<this.getEmployees().length;i++){
+            if(this.getEmployees()[i].id==employee.id){
+                j=i+1;
+                while(j<this.getEmployees().length) {
+                    this.getEmployees()[i] = this.getEmployees()[j];
+                    j++;
+                    i++;
+                }
+                break label;
             }
         }
 
-    }*/
+        this.getEmployees()[9]=new Employee ("set","set",000,000);
+
+    }
+
+    public void removeEmployee(long id){
+        int i, j, k;
+
+        label:
+        for (i=0;i<this.getEmployees().length;i++){
+            if(this.getEmployees()[i].id==id){
+                j=i+1;
+                while(j<this.getEmployees().length) {
+                    this.getEmployees()[i] = this.getEmployees()[j];
+                    j++;
+                    i++;
+                }
+                break label;
+            }
+        }
+
+        this.getEmployees()[9]=new Employee ("set","set",000,000);
+
+    }
 
     public int sizeOfEmployees(){
         int count;
@@ -110,5 +139,17 @@ public class Departament {
             }
         }
         return count;
+    }
+
+    public void listAllEmployess(){
+        System.out.println("Os funcionários cadastrados desse departamento são: \n");
+        System.out.println("id \tnome \tsalario \tcargo");
+        for (Employee i : this.getEmployees()){
+            if(i.name!="set"){
+                System.out.println(i.id+"\t"+i.name+"\t"+i.salary+"\t"+i.jobTitle+"\n");
+            } else{
+                break;
+            }
+        }
     }
 }
