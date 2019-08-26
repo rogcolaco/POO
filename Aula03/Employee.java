@@ -5,6 +5,7 @@ public class Employee {
     long id;
     double salary;
     Departament departament;
+    Boolean chief;
 
     //CONSTRUCTORS
     public Employee(long id) {
@@ -62,6 +63,14 @@ public class Employee {
 
     public void setDepartament(Departament departament){
         this.departament=departament;
+    }
+
+    public Boolean getChief() {
+        return chief;
+    }
+
+    public void setChief(Boolean chief) {
+        this.chief = chief;
     }
 
     //METHODS
