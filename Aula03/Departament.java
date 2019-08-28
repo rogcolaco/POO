@@ -1,11 +1,11 @@
 public class Departament {
 
     //DECLARAÇÃO ATRIBUTOS DA CLASSE
-    String name, location;
-    int code, phoneExtention;
-    double budget;
-    Employee[] employee = new Employee[10];
-    Employee departamentCharge;
+    private String name, location;
+    private int code, phoneExtention;
+    private double budget;
+    private Employee[] employee = new Employee[10];
+    private Employee departamentCharge;
 
     //CONSTRUCTORS
     public Departament(String name, int code) {
