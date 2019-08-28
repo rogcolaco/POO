@@ -1,11 +1,11 @@
 public class Employee {
 
     //DECLARAÇÃO ATRIBUTOS DA CLASSE
-    String name, jobTitle;;
-    long id;
-    double salary;
-    Departament departament;
-    Boolean chief;
+    private String name, jobTitle;;
+    private long id;
+    private double salary;
+    private Departament departament;
+    private Boolean chief;
 
     //CONSTRUCTORS
     public Employee(long id) {
