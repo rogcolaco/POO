@@ -20,7 +20,7 @@ public class Client {
 
     public void listAccount(){
         for (int i=0;i<qtdAccount;i++){
-            System.out.println("Número: " + this.getAccounts()[i].getNumber() + "Agência: "+ this.getAccounts()[i].getAgency());
+            System.out.println("Número: " + this.getAccounts()[i].getNumber() + " Agência: "+ this.getAccounts()[i].getAgency());
         }
     }
 
