@@ -1,7 +1,19 @@
 public class Bank {
     private int number;
     private Account accounts[] = new Account[10];
-    int qtdAccount = 0;
+    private int qtdAccount = 0;
+
+    public double aproveLimit(double amount, Account a){
+        double preAproved;
+
+        preAproved = 200 + (300*a.getAccountTime());
+        if(preAproved<amount){
+            return preAproved;
+        }else{
+            return amount;
+        }
+
+    }
 
     public int sizeOfAccount(){
         return qtdAccount;
@@ -10,14 +22,14 @@ public class Bank {
     public void listAccounts(long agency){
         for (int i=0;i<qtdAccount;i++){
             if(this.getAccounts()[i].getAgency()==agency) {
-                System.out.println("Número: " + this.getAccounts()[i].getNumber() + "Agência: " + this.getAccounts()[i].getAgency());
+                System.out.println("Número: " + this.getAccounts()[i].getNumber() + " Agência: " + this.getAccounts()[i].getAgency());
             }
         }
     }
 
     public void listAccounts(){
         for (int i=0;i<qtdAccount;i++){
-            System.out.println("Número: " + this.getAccounts()[i].getNumber() + "Agência: "+ this.getAccounts()[i].getAgency());
+            System.out.println("Número: " + this.getAccounts()[i].getNumber() + " Agência: "+ this.getAccounts()[i].getAgency());
         }
     }
 
